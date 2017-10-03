@@ -9,8 +9,10 @@
 
     <bean id="bar" class="lab.model.ApuBar"/>
 
-    <bean id="customer" class="lab.model.Customer" p:name="Homer" p:broke="false"/>
+    <bean id="customer" class="lab.model.Customer" p:name="Homer" p:broke="true"/>
 
     <bean id="politeness" class="lab.aop.Politeness"/>
+
+    <aop:aspectj-autoproxy/>
 
 </beans>
