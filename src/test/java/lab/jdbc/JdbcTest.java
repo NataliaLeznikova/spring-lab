@@ -62,7 +62,9 @@ class JdbcTest{
     @DirtiesContext
     void testCountryChange() {
         countryDao.updateCountryName("RU", "Russia");
+        countryDao.updateCountryName("EN", "England");
         assertEquals(countryWithChangedName, countryDao.getCountryByCodeName("RU"));
+        assertEquals(countryWithChangedName, countryDao.getCountryByCodeName("EN"));
     }
 
     private void initExpectedCountryLists() {
